@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Thiagosdep/crs-clean-tdd-nodejs-api/issues"
   },
-  "homepage": "https://github.com/Thiagosdep/crs-clean-tdd-nodejs-api#readme"
+  "homepage": "https://github.com/Thiagosdep/crs-clean-tdd-nodejs-api#readme",
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
 }
