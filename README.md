@@ -12,3 +12,5 @@
 - possível disparar um script antes de fazer um commit que servirá para averiguar testes, linters, etc... e evitar subir commits quebrados
 
 # Jest (npm i jest -D)
+
+# validator (npm i validator)
