@@ -104,6 +104,16 @@ const makeUpdateAccessTokenRepository = () => {
   return new UpdateAccessTokenRepository()
 }
 
+const makeUpdateAccessTokenRepositoryWithError = () => {
+  class UpdateAccessTokenRepository {
+    update () {
+      throw new Error()
+    }
+  }
+
+  return new UpdateAccessTokenRepository()
+}
+
 describe('Auth UseCase', () => {
   test('Should throw if no email is provided', () => {
     const { sut } = makeSut()
@@ -226,6 +236,12 @@ describe('Auth UseCase', () => {
         loadUserByEmailRepository,
         encrypter: makeEncrypter(),
         tokenGenerator: makeTokenGeneratorWithError()
+      }),
+      new AuthUseCase({
+        loadUserByEmailRepository,
+        encrypter: makeEncrypter(),
+        tokenGenerator: makeTokenGenerator(),
+        updateAccessTokenRepository: makeUpdateAccessTokenRepositoryWithError()
       })
     )
     for (const sut of suts) {
