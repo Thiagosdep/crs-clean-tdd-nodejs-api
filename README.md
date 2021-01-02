@@ -14,3 +14,5 @@
 # Jest (npm i jest -D)
 
 # validator (npm i validator)
+
+# bcrypt (npm i bcrypt)
