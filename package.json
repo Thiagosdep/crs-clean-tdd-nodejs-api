@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests --verbose --noStackTrace",
-    "test:unit": "npm test -- --watchAll -c jest-unit-config.js",
+    "test:unit": "npm test -- --detectOpenHandles --watchAll -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
-    "test-staged": "npm test -- --silent --findRelatedTests",
+    "test-staged": "npm test -- --detectOpenHandles",
     "test:ci": "npm test -- --silent --coverage"
   },
   "standard": {
