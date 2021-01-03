@@ -16,3 +16,5 @@
 # validator (npm i validator)
 
 # bcrypt (npm i bcrypt)
+
+# JWT (npm i jsonwebtoken)
