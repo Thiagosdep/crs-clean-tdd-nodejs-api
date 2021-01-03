@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests --silent --verbose --noStackTrace",
-    "test:unit": "npm test -- --watch -c jest-unit-config.js",
+    "test": "jest --passWithNoTests --verbose --noStackTrace",
+    "test:unit": "npm test -- --watchAll -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
-    "test-staged": "npm test -- --findRelatedTests",
-    "test:ci": "npm test -- --coverage"
+    "test-staged": "npm test -- --silent --findRelatedTests",
+    "test:ci": "npm test -- --silent --coverage"
   },
   "standard": {
     "env": [
@@ -32,9 +32,11 @@
     "standard": "^16.0.3"
   },
   "dependencies": {
+    "@shelf/jest-mongodb": "^1.2.3",
     "bcrypt": "^5.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.3",
     "validator": "^13.5.2"
   }
 }

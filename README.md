@@ -18,3 +18,7 @@
 # bcrypt (npm i bcrypt)
 
 # JWT (npm i jsonwebtoken)
+
+# MongoDB (npm i mongodb)
+
+# Jest MongoDB (npm i @shelf/jest-mongodb -D)
