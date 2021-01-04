@@ -25,4 +25,6 @@
 
 # Express (npm i express)
 
+# Fast-glob (npm i fast-glob)
+
 # Supertest (npm i supertest -D)
