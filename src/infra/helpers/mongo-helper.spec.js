@@ -9,5 +9,6 @@ describe('Mongo Helper', () => {
     expect(sut.db).toBeFalsy()
     await sut.getDb()
     expect(sut.db).toBeTruthy()
+    await sut.disconnect()
   })
 })

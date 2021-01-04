@@ -5,11 +5,11 @@
   "main": "src/main/index.js",
   "scripts": {
     "start": "node src/main/index.js",
-    "test": "jest --passWithNoTests --verbose --noStackTrace --runInBand",
-    "test:unit": "npm test -- --detectOpenHandles --watch -c jest-unit-config.js",
+    "test": "jest --passWithNoTests --verbose --noStackTrace --detectOpenHandles",
+    "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:all": "npm test -- --watchAll --silent --verbose",
-    "test-staged": "npm test -- --detectOpenHandles",
+    "test-staged": "npm test -- ",
     "test:ci": "npm test -- --silent --coverage"
   },
   "standard": {
