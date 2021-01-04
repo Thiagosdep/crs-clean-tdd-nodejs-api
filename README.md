@@ -24,3 +24,5 @@
 # Jest MongoDB (npm i @shelf/jest-mongodb -D)
 
 # Express (npm i express)
+
+# Supertest (npm i supertest -D)
