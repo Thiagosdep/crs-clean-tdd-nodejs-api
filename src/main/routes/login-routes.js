@@ -1,10 +1,5 @@
-// const LoginRouter = require('../../presentation/routers/login-router')
-// const AuthUseCase = require('../../domain/usecases/auth-usecase')
-// const EmailValidator = require('../../utils/helpers/email-validator')
-
+const loginRouter = require('../composers/login-router-composer')
+const ExpressRouterAdapter = require('../adapters/express-router-adapter')
 module.exports = router => {
-//   const emailValidor = new EmailValidator()
-//   const authUseCase = new AuthUseCase()
-//   const loginRouter = new LoginRouter(authUseCase)
-//   router.post('/login', loginRouter)
+  router.post('/login', ExpressRouterAdapter.adapt(loginRouter))
 }

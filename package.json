@@ -8,7 +8,7 @@
     "test": "jest --passWithNoTests --verbose --noStackTrace --detectOpenHandles",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
-    "test:all": "npm test -- --watchAll --silent --verbose",
+    "test:all": "npm test -- --watchAll --silent",
     "test-staged": "npm test -- ",
     "test:ci": "npm test -- --silent --coverage"
   },
