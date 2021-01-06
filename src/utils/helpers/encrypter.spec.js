@@ -1,4 +1,16 @@
+jest.mock('bcrypt', () => ({
+  isValid: true,
+  value: '',
+  hash: '',
+
+  async compare (value, hash) {
+    this.value = value
+    this.hash = hash
+    return this.isValid
+  }
+}))
 const bcrypt = require('bcrypt')
+
 const Encrypter = require('./encrypter')
 const { MissingParamError } = require('../errors')
 const makeSut = () => {

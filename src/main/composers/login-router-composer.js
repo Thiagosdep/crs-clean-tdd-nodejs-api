@@ -8,7 +8,7 @@ const TokenGenerator = require('../../utils/helpers/token-generator')
 const env = require('../config/env')
 module.exports = class LoginRouterComposer {
   static compose () {
-    const emailValidor = new EmailValidator()
+    const emailValidator = new EmailValidator()
     const loadUserByEmailRepository = new LoadUserByEmailRepository()
     const updateAccessTokenRepository = new UpdateAccessTokenRepository()
     const encrypter = new Encrypter()
@@ -19,6 +19,6 @@ module.exports = class LoginRouterComposer {
       encrypter,
       tokenGenerator
     })
-    return new LoginRouter({ authUseCase, emailValidor })
+    return new LoginRouter({ authUseCase, emailValidator })
   }
 }
